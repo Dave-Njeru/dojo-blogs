@@ -1,0 +1,1 @@
+export const API_URL = 'https://dojo-blogs-mock-server.onrender.com/blogs';

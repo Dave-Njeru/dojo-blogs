@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import { API_URL } from "./config";
 
 const Create = () => {
     const [title, setTitle] = useState('');
@@ -13,7 +14,7 @@ const Create = () => {
         const blog = { title, body, author };
         setIsPending(true);
 
-        fetch('http://localhost:8000/blogs', {
+        fetch(API_URL, {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(blog)

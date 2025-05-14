@@ -1,8 +1,9 @@
 import BlogList from "./BlogList";
 import useFetch from "./useFetch"; // import custom hook
+import { API_URL } from "./config";
 
 const Home = () => {
-    const {data: blogs, isLoading, error} = useFetch('http://localhost:8000/blogs');
+    const {data: blogs, isLoading, error} = useFetch(API_URL);
 
     return (
         <div className="name">
